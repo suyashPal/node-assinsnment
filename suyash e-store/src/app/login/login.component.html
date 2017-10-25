@@ -1,0 +1,19 @@
+<div style="margin-top:100px;">
+ <h1 style="text-align:center;"> {{title}}</h1>
+<form>
+  <div class="container">
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" [(ngModel)]="user_email" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="user_pass" required>
+
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn" (click)="onAuthentication(user_email,user_pass)">Login</button>
+    </div>
+    <h2>{{message}}</h2>
+  </div>
+</form>
+</div>

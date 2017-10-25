@@ -1,0 +1,39 @@
+<div style="margin-top:100px;margin-left:35%;margin-bottom:100px;">
+  <h1 style="margin-left:18%;">Signup</h1>
+  <div style="margin-top:50px;margin-bottom:50px;">
+  <form name="RegForm">
+     name:<br>
+    <input type="text" name="name" placeholder="Enter  name" [(ngModel)]="name" required autofocus/><br>
+
+    Password:<br>
+    <input type="password" name="password" placeholder="Enter password" [(ngModel)]="password" required/><br>
+
+    contactno:<br>
+    <input type="tel" name="phoneNumber" placeholder="Enter phone number" [(ngModel)]="contactno" required/><br>
+    mailid:<br>
+    <input type="email" name="emailAddress" placeholder="Enter your email-id" [(ngModel)]="mailid" required/><br>
+
+    birthdate:<br>
+    <input type="date" name="birthdate" placeholder="enter dob" [(ngModel)]="birthdate" required/><br>
+
+
+
+    Pincode:<br>
+    <input type="text" name="pincode" [(ngModel)]="pincode" placeholder="Enter pin code" required/><br>
+
+    Contact Address:<br>
+    <textarea class="text" name="user_address" [(ngModel)]="address" rows="5" cols="32" required>
+    </textarea><br><br>
+
+    <div>
+
+    </div>
+    <input style="margin-left:12%;" type="submit" value="submit" (click)="onSubmit(name,password,contactno,mailid,birthdate,pincode,address)"/>
+    <!--<input type="button" value="reset" onclick="clear()"/>-->
+    <!-- <button>clear</button>	 -->
+
+    </form>
+    <h2 style="margin-left:-50%;"><a [routerLink]="['/login']">{{ message }}</a></h2>
+    <h2 style="margin-left:-50%;color:#336BFF;" *ngIf="!status">{{ userExists }}</h2>
+  </div>
+</div>

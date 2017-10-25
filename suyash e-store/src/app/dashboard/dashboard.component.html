@@ -1,0 +1,30 @@
+<div>
+<h1>Welcome Suyash Pal</h1>
+<div>
+  <img src="assets/images/1.jpg">
+  <br><br>
+  <p>
+    <b> PRS SE22 Standard</b>
+    </p>
+    <button class="button yellow" (click)="addCart()">
+	<div class="title">Add to cart</div>
+	<div class="price">Rs. 1,50,000 /-</div>
+  </button>
+</div>
+<div style="margin-top:30px;">
+  <img src="assets/images/2.jpg" style="height:300;width:800px;">
+  <br><br>
+  <p>
+   <b>LES PAUL Custom24</b>
+  </p>
+  <button class="button yellow" (click)="addCart()" >
+	<div class="title">Add to cart</div>
+	<div class="price">Rs. 1,75,000 /-</div>
+</button>
+</div>
+<div class="sidenav">
+    <a [routerLink]="['/profile' ]" class="w3-bar-item w3-button">My Profile</a>
+    <a [routerLink]="['/edit_profile']" class="w3-bar-item w3-button">Edit Profile</a>
+    <a [routerLink]="['/logout']" class="w3-bar-item w3-button">Logout</a>
+  </div>
+</div>
